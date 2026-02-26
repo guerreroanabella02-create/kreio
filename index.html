@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kreio.ai — AI Content Creation & Generative AI Platform</title>
+  <meta name="description" content="Kreio.ai — A premium .ai domain for the next generation of AI content creation platforms. Short, semantic, globally brandable. Inquire about acquisition." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8;
+      --cream-dark: #ede8de;
+      --ink: #1a1510;
+      --gold: #c9922a;
+      --muted: #7a7060;
+      --border: rgba(26,21,16,0.10);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.6;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+
+    /* HEADER */
+    header { padding: 2.5rem 0 0; display: flex; justify-content: space-between; align-items: center; }
+    .badge { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,146,42,0.35); padding: 0.35rem 0.9rem; }
+    .year-tag { font-size: 0.62rem; letter-spacing: 0.12em; color: var(--muted); }
+
+    /* HERO */
+    .hero { padding: 6rem 0 4rem; }
+    .hero-eyebrow { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; }
+    .domain-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(5rem, 14vw, 11rem); font-weight: 300; line-height: 0.9; letter-spacing: -0.02em; color: var(--ink); display: inline-block; }
+    .domain-name .dot-ai { color: var(--gold); font-style: italic; }
+    .hero-rule { width: 100%; height: 1px; background: var(--border); margin: 3rem 0; position: relative; }
+    .hero-rule::after { content: ''; position: absolute; left: 0; top: 0; width: 120px; height: 1px; background: var(--gold); }
+    .hero-desc { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 300; font-style: italic; line-height: 1.55; color: var(--ink); max-width: 580px; }
+
+    /* ATTRIBUTES */
+    .attributes { padding: 4rem 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .attr-item { padding: 2.5rem 2rem 2.5rem 0; border-right: 1px solid var(--border); }
+    .attr-item:last-child { border-right: none; padding-left: 2rem; padding-right: 0; }
+    .attr-item:nth-child(2) { padding-left: 2rem; }
+    .attr-num { font-size: 0.58rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1rem; display: block; }
+    .attr-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.2; }
+    .attr-desc { font-size: 0.68rem; line-height: 1.75; color: var(--muted); }
+
+    /* USE CASES */
+    .section-label { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .use-cases { padding: 5rem 0; }
+    .cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--border); border: 1px solid var(--border); }
+    .case-item { background: var(--cream); padding: 2.2rem 2rem; transition: background 0.2s; }
+    .case-item:hover { background: var(--cream-dark); }
+    .case-icon { font-size: 1.1rem; margin-bottom: 1rem; display: block; color: var(--gold); }
+    .case-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
+    .case-desc { font-size: 0.67rem; color: var(--muted); line-height: 1.75; }
+
+    /* CONTACT */
+    .contact-section { padding: 6rem 0; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .contact-left h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 1.5rem; }
+    .contact-left p { font-size: 0.68rem; color: var(--muted); line-height: 1.85; }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .form-group input, .form-group textarea {
+      background: transparent; border: 1px solid var(--border); border-bottom-color: rgba(26,21,16,0.22);
+      padding: 0.85rem 0.9rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--ink);
+      outline: none; transition: border-color 0.2s; resize: none; -webkit-appearance: none; border-radius: 0;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(122,112,96,0.45); }
+    .btn-send { background: var(--ink); color: var(--cream); border: 2px solid var(--ink); padding: 1rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; margin-top: 0.5rem; }
+    .btn-send:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .form-note { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.05em; }
+    .form-success { display: none; padding: 2rem; border: 1px solid rgba(201,146,42,0.3); background: rgba(201,146,42,0.05); text-align: center; }
+    .form-success p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--ink); line-height: 1.5; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; }
+    .footer-domain { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--ink); }
+    .footer-copy { font-size: 0.58rem; color: var(--muted); letter-spacing: 0.1em; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-eyebrow { animation: fadeUp 0.6s ease 0.1s both; }
+    .domain-name  { animation: fadeUp 0.8s ease 0.2s both; }
+    .hero-rule    { animation: fadeUp 0.6s ease 0.4s both; }
+    .hero-desc    { animation: fadeUp 0.6s ease 0.5s both; }
+
+    /* RESPONSIVE */
+    @media (max-width: 680px) {
+      .attributes { grid-template-columns: 1fr; }
+      .attr-item { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem 0; }
+      .attr-item:last-child { border-bottom: none; padding-left: 0; }
+      .attr-item:nth-child(2) { padding-left: 0; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .contact-section { grid-template-columns: 1fr; gap: 3rem; }
+      header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <span class="badge">Premium .AI Domain</span>
+    <span class="year-tag">2026 · AI Registry</span>
+  </header>
+
+  <section class="hero">
+    <p class="hero-eyebrow">Gen AI · Content Creation · Creative Platforms</p>
+    <h1 class="domain-name">Kreio<span class="dot-ai">.ai</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">A domain built for the era of intelligent creation. Short, sonorous, globally pronounceable — the ideal brand foundation for any AI-powered content platform.</p>
+  </section>
+
+  <div class="attributes">
+    <div class="attr-item">
+      <span class="attr-num">01</span>
+      <h3 class="attr-title">5 Letters</h3>
+      <p class="attr-desc">Concise, memorable, and typeable in under a second. Brevity is the rarest luxury in branding.</p>
+    </div>
+    <div class="attr-item">
+      <span class="attr-num">02</span>
+      <h3 class="attr-title">Semantic Root</h3>
+      <p class="attr-desc">"Krei" derives from the Latin <em>creare</em> — to create. Embedded meaning that resonates across 30+ languages.</p>
+    </div>
+    <div class="attr-item">
+      <span class="attr-num">03</span>
+      <h3 class="attr-title">Premium TLD</h3>
+      <p class="attr-desc">.ai is the definitive signal for AI ventures. Preferred by top-tier investors and founders globally.</p>
+    </div>
+  </div>
+
+  <section class="use-cases">
+    <p class="section-label">Ideal Use Cases</p>
+    <div class="cases-grid">
+      <div class="case-item">
+        <span class="case-icon">✦</span>
+        <h4 class="case-title">AI Content Generation</h4>
+        <p class="case-desc">Platforms enabling writers, marketers, and creators to produce content at scale using generative AI models.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">◈</span>
+        <h4 class="case-title">Creative Studio AI</h4>
+        <p class="case-desc">Next-gen design and multimedia tools powered by diffusion models and large multimodal systems.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">⬡</span>
+        <h4 class="case-title">AI Copywriting & SEO</h4>
+        <p class="case-desc">Automated brand voice, ad copy, and SEO content generation for agencies and growth teams.</p>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">◉</span>
+        <h4 class="case-title">Creator Economy Tools</h4>
+        <p class="case-desc">AI-native platforms helping individual creators build, monetize, and distribute their work intelligently.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-left">
+      <h2>Interested in Kreio.ai?</h2>
+      <p>If you're building in the AI content space and believe this domain fits your vision, we'd love to hear from you. Fill in the form and we'll be in touch within 48 hours.</p>
+    </div>
+    <div class="contact-right">
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="company">Company / Project</label>
+          <input type="text" id="company" name="company" placeholder="Optional" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us briefly about your project..."></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send Inquiry →</button>
+        <p class="form-note">Your information is kept strictly private.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <p>Thank you — we'll be in touch within 48 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-domain">Kreio.ai</span>
+    <span class="footer-copy">© 2026 · All rights reserved</span>
+  </footer>
+
+</div>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(this);
+    window.location.href = `mailto:contact@kreio.ai?subject=Inquiry - Kreio.ai&body=Name: ${encodeURIComponent(data.get('name'))}%0AEmail: ${encodeURIComponent(data.get('email'))}%0ACompany: ${encodeURIComponent(data.get('company') || 'N/A')}%0A%0A${encodeURIComponent(data.get('message') || '')}`;
+    this.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>
